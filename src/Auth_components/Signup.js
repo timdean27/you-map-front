@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { Form, Button, Card, Alert } from "react-bootstrap";
 import {useAuth} from '../contexts/AuthContext'
-import { Link} from "react-router-dom"
+import {Link , useNavigate} from "react-router-dom"
 
 
 const Signup = () => {
@@ -13,7 +13,7 @@ const Signup = () => {
   } = useAuth()
   const [error, setError] = useState("")
   const [loading, setLoading] = useState(false)
-
+  const navigate = useNavigate();
 
   async function handleSubmit(e) {
     e.preventDefault()
@@ -26,6 +26,7 @@ const Signup = () => {
       setError("")
       setLoading(true)
       await signup(emailRef.current.value, passwordRef.current.value)
+      navigate("/login")
     } catch {
       setError("Failed to create an account")
     }
@@ -34,7 +35,7 @@ const Signup = () => {
   }
 
   return (
-    <div>
+    <div >
       <Card>
         <Card.Body>
           <h2 className="text-center mb-4">Sign Up</h2>
@@ -59,8 +60,8 @@ const Signup = () => {
           </Form>
         </Card.Body>
       </Card>
-      <div className="w-100 text-center mt-2">
-        Already have an account?
+      <div>
+        Already have an account? <Link to="/login">Login</Link>
       </div>
     </div>
     )
