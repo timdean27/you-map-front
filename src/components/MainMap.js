@@ -4,8 +4,8 @@ import mapboxgl from 'mapbox-gl';
 
 
 // Mapbox key
-const T = process.env.REACT_APP_TOKEN
-mapboxgl.accessToken=T
+const Token = process.env.REACT_APP_TOKEN
+mapboxgl.accessToken=Token
 
 function MainMap() {
 
