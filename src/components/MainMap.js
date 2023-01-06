@@ -1,6 +1,7 @@
 import React, {useRef, useEffect, useState} from 'react';
-
 import mapboxgl from 'mapbox-gl';
+import "./Map.css";
+import markers from './testing.json'
 
 
 // Mapbox key
@@ -25,10 +26,14 @@ function MainMap() {
             center: [lng, lat],
             zoom: zoom,
             });
+
             // from Mapbox.com
-            // const marker = new mapboxgl.Marker()
-            // .setLngLat(-122.26,37.79)
-            // .addTo(map)
+            markers.map((marker) => new mapboxgl.Marker()
+            .setLngLat(marker)
+            .setPopup(new mapboxgl.Popup({offset:50})
+            // looking to populate shelter name in line below
+            .setHTML(`<h1>Hey Tim</h1>`))
+            .addTo(map.current));
         });
          
    
