@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 const { Schema } = mongoose;
 
 const blogSchema = new Schema({
-  title:  String, // String is shorthand for {type: String}
+  tltie:  String, // String is shorthand for {type: String}
   author: String,
   body:   String,
   comments: [{ body: String, date: Date }],
@@ -13,4 +13,20 @@ const blogSchema = new Schema({
     votes: Number,
     favs:  Number
   }
+  timestamp: true
 });
+
+
+unsplash vaca photos:
+1a:Photo by <a href="https://unsplash.com/@seefromthesky?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ishan @seefromthesky</a> on <a href="https://unsplash.com/s/photos/vacation?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+1b: Photo by <a href="https://unsplash.com/@andycrone?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Andy Crone</a> on <a href="https://unsplash.com/s/photos/vacation?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+1c:Photo by <a href="https://unsplash.com/@souvenirpixels?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">James Wheeler</a> on <a href="https://unsplash.com/s/photos/outdoor?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+1d:Photo by <a href="https://unsplash.com/es/@yiranding?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Yiran Ding</a> on <a href="https://unsplash.com/s/photos/outdoor?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+      
+unsplash profile photos:
+1: Photo by <a href="https://unsplash.com/@michaeldam?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Michael Dam</a> on <a href="https://unsplash.com/images/people?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+2: Photo by <a href="https://unsplash.com/@alimorshedlou?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ali Morshedlou</a> on <a href="https://unsplash.com/s/photos/men?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+3: Photo by <a href="https://unsplash.com/@arona?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Meysam Jarahkar</a> on <a href="https://unsplash.com/s/photos/men?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+4: Photo by <a href="https://unsplash.com/@wocintechchat?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Christina @ wocintechchat.com</a> on <a href="https://unsplash.com/s/photos/women-portrait?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+    
+  
