@@ -1,0 +1,47 @@
+.header-container {
+   height: 50px;
+   width: 100%;
+   background-color: aqua;
+   display: flex;
+   align-items: center;
+   position: sticky;
+   top:0; 
+}
+.logo{
+    margin-left: 20px;
+    justify-content: center;
+ 
+}
+.header-left{
+    flex:4;
+    background-color: red;
+
+}
+.header-center{
+    flex:3;
+    background-color:purple;
+
+}
+.search {
+    width: 100%;
+    background-color: white;
+    border-radius: 40px;
+    border: 1px solid black;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+}
+.search-icon{
+    font-size: 25px;
+    margin: 2px;
+}
+.header-right{
+    flex:5;
+    background-color: green;
+
+}
+
+.profile-img{
+    height: 40px;
+    width: 40px;
+}
