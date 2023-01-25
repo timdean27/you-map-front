@@ -1,7 +1,7 @@
 import React, {useRef, useEffect, useState} from 'react';
 import mapboxgl from 'mapbox-gl';
 import "./Map.css";
-import markers from './testing.json'
+import markers from './testing2.json'
 
 
 // Mapbox key
@@ -16,6 +16,7 @@ function MainMap() {
     const [zoom, setZoom] = useState(5);
     const [lng, setLng] = useState(-70.9);
     const [lat, setLat] = useState(42.35);
+    
 
     useEffect(() => {
             // from Mapbox.com
@@ -44,6 +45,19 @@ function MainMap() {
             setLat(map.current.getCenter().lat.toFixed(4));
             setZoom(map.current.getZoom().toFixed(2));
                 });
+
+// Add the control to the map.
+map.addControl(
+    new MapboxGeocoder({
+    accessToken: mapboxgl.accessToken,
+    mapboxgl: mapboxgl
+    })
+    );
+
+
+
+
+
             });
 
             // flyThis()
@@ -63,6 +77,7 @@ function MainMap() {
             Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
         </div>
         <div ref={mapContainer} className="map-container mt-5" />
+        
     </div>
   )
 }
