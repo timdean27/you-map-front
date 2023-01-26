@@ -6,7 +6,7 @@ import ReactMapGL, {
   NavigationControl,
 } from "react-map-gl";
 
-import PopUpInfo from "../components/PopUpInfo";
+import PopUpInfo from "../Components/PopUpInfo";
 
 function MapPage() {
   const [selectedMarker, setSelectedMarker] = useState(null);
@@ -37,7 +37,7 @@ function MapPage() {
 // On move fucntionality sets current lat and long (print e to see full object)
 // style and global are hard set in ReactMapGl comp
   const onMoveFunc = (e) => {
-    // console.log("event from move fucntion",e);
+//    console.log("event from move fucntion",e);
     setViewState(e.viewState);
     setCurrentLatLng([e.viewState.latitude , e.viewState.longitude])
   };
@@ -60,8 +60,18 @@ function MapPage() {
     ]);
   };
 
-  useEffect(() => {}, []);
+  
+  const clickFuncSelectMarker = (markedLocation) => {
+    if(markedLocation != selectedMarker){
+    console.log("marked location in onClick button",markedLocation);
+    setSelectedMarker(markedLocation);
+    }
+    else(console.log(markedLocation))
+  }
 
+  useEffect(() => {
+  }, []);
+  
   console.log("selected marker",selectedMarker);
 
   return (
@@ -95,9 +105,9 @@ function MapPage() {
                 longitude={markedLocation.coordinates[0]}
               >
                 <button
-                  onClick={() => {
-                    console.log(markedLocation);
-                    setSelectedMarker(markedLocation);
+                  onClick={e =>{
+                    e.preventDefault();
+                    clickFuncSelectMarker(markedLocation);
                   }}
                 >
                   {markedLocation.name}
@@ -107,20 +117,25 @@ function MapPage() {
           : null}
 
         {selectedMarker ? (
-          
+          <div>
+         {console.log("this should print when selectedMarker is true",selectedMarker, )}
             <Popup
+              closeOnClick={false}
+              closeButton={true}
               latitude={selectedMarker.coordinates[1]}
               longitude={selectedMarker.coordinates[0]}
-              // onClose={() => {
-              // setSelectedMarker(null)}}
+              onClose={e => {
+              setSelectedMarker(null)}}
             >
+              <div>
               <PopUpInfo />
-              
+              </div>
             </Popup>
-          
-        ) : null}
+            </div>
+        ) : console.log("failing at Popup")}
       </ReactMapGL>
     </div>
   );
 }
 export default MapPage;
+
