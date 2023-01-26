@@ -15,14 +15,13 @@ function Header() {
             </span>
         </div>
         <div className='header-center'>
-            <div className='search'>search??
+            <div className='search'>
                 <BsSearch className='search-icon'/>
                 <input placeholder='search for friend post or video' className='search-input' />
             </div>
         </div>
         <div className='header-right'>
             <div className='person-icon'>
-                person icon
                 <BsFillPersonFill />
                 <span className='person-icon-badge'>1</span>
             </div>

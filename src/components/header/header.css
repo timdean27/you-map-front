@@ -13,12 +13,12 @@
  
 }
 .header-left{
-    flex:4;
+    flex:2;
     background-color: red;
 
 }
 .header-center{
-    flex:3;
+    flex:4;
     background-color:purple;
 
 }
@@ -33,15 +33,50 @@
 }
 .search-icon{
     font-size: 25px;
-    margin: 2px;
+    margin-left: 5px;
+    width: 10%;
+}
+.search-input{
+    width: 85%;
+}
+.search-input:focus{
+    outline:none;
 }
 .header-right{
-    flex:5;
+    flex:6;
     background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
 
+}
+
+.person-icon{
+    display: flex;
+    margin-right: 15px;
+    cursor: pointer;
+    position: relative;
+}
+.person-icon-badge{
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 50%;
+    color: white;
+    position: absolute;
+    top:-5px;
+    right: -15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
 }
 
 .profile-img{
     height: 40px;
     width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
 }
