@@ -5,8 +5,11 @@ import markers from './testing2.json'
 
 
 // Mapbox key
+
 const MapboxToken = process.env.REACT_APP_TOKEN
 mapboxgl.accessToken=MapboxToken
+
+
 
 function MainMap() {
 
