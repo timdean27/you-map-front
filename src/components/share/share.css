@@ -3,14 +3,14 @@
     height: 170px;
     border-radius: 10px;
     background-color: lightskyblue;
-    /* box shadow genrator */
+    /* box shadow genrator https://html-css-js.com/css/generator/box-shadow/*/
     box-shadow: 10px 9px 14px 0px rgba(0,0,0,0.88); 
     -webkit-box-shadow: 10px 9px 14px 0px rgba(0,0,0,0.88);
 }
 .share-wrapper{
     padding: 5px;
 }
-/* .share-top{} */
+.share-top{}
 .share-profile-img{
     width: 50px;
     height: 50px;
@@ -19,10 +19,45 @@
     /* margin */
 
 }
-/* .share-input{}
-.share-hr{}
-.share-bottom{}
-.share-options{}
-.share-option{}
-.share-icon{}
-.share-option-text{} */
+.share-input{
+    border: none;
+    width: 80%;
+}
+.share-hr{
+    margin: 20px;
+}
+.share-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.share-options{
+    display: flex;
+
+}
+.share-option{
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.share-icon{
+    font-size: 18px;
+    margin: 3px;
+}
+.share-option-text{
+    font-size: 12px;
+    font-weight: 600;
+
+}
+.share-btn{
+    border: none;
+    padding: 5px;
+    border-radius: 7px;
+    background-color: green;
+    font-weight: 500;
+    margin-right: 20px;
+    cursor: pointer;
+    color: white;
+
+}
