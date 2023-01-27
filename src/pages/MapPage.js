@@ -6,7 +6,7 @@ import ReactMapGL, {
   NavigationControl,
 } from "react-map-gl";
 
-import PopUpInfo from "../Components/PopUpInfo";
+import PopUpInfo from "../components/PopUpInfo";
 
 function MapPage() {
   const [selectedMarker, setSelectedMarker] = useState(null);
