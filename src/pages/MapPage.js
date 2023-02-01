@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import './home.css'
+
 import ReactMapGL, {
   Marker,
   Popup,
@@ -75,7 +77,7 @@ function MapPage() {
   console.log("selected marker",selectedMarker);
 
   return (
-    <div>
+    <div className="mappage">
       <div className="CurrentLatLngBox">
         Current Location
         <div>Latitude:{currentLatLng[0]}</div>
