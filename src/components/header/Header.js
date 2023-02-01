@@ -26,6 +26,7 @@ function Header() {
                 <span className='person-icon-badge'>1</span>
             </div>
             <div className='login'>
+                **New Account**
                 **Login**
                 <CiLogin />
             </div>
