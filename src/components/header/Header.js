@@ -1,9 +1,9 @@
 import React from 'react'
 import './header.css'
-
-
 import { BsSearch,BsFillPersonFill } from "react-icons/bs";
 import { CiLogin } from "react-icons/ci";
+import {Link} from 'react-router-dom'
+import Profile from '../profile/Profile';
 
 function Header() {
   return (
@@ -27,11 +27,13 @@ function Header() {
             </div>
             <div className='login'>
                 **New Account**
-                **Login**
+                <Link className='login-link' to='/login'>Login</Link>
+                <Link className='login-link' to='/logout'>Logout</Link>
                 <CiLogin />
             </div>
-            <img src="assets/profile2.jpg" alt='profile'className='profile-img'/>
-          </div>
+            {/* <img src="assets/profile2.jpg" alt='profile'className='profile-img'/> */}
+            <Profile />
+        </div>
  
     </div>
   )
