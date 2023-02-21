@@ -87,7 +87,7 @@ function MapPage() {
         <div>Longitude:{currentLatLng[1]}</div>
       </div>
       <ReactMapGL
-        style={{ width: 800, height: 600 }}
+        style={{ width: "100vw", height: "100vh" }}
         mapStyle="mapbox://styles/mapbox/satellite-streets-v12"
         projection="globe"
         mapboxAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}

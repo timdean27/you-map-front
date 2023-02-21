@@ -1,0 +1,7 @@
+.profile-pic{
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    margin-left: 40px;
+    border-radius: 50%;
+}
