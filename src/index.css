@@ -4,26 +4,27 @@
 
 
 .marker {
-    background: rgb(165, 251, 208);
-    padding: 10px;
-    width: 35px;
-    height: 30px;
-    border-radius: 50%;
-    box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
-    opacity: .8;
-    text-align: center;
-  }
-  
-  
-  /* ViewPopUpStart PAge */
-  .Iamge_POPup{
-    width: 150px;
-    height: 150px;
-  }
-  
-  .ImageContainer{
-    text-align: center;
-  }
-  .placeholder{
-    opacity: 0;
-  }
+  background: none;
+  border: none;
+  margin: 0px;
+}
+
+.marker img {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+
+/* ViewPopUpStart Page */
+.Iamge_POPup{
+  width: 150px;
+  height: 150px;
+}
+
+.ImageContainer{
+  text-align: center;
+}
+.placeholder{
+  opacity: 0;
+}
