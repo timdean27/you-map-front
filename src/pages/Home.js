@@ -1,6 +1,5 @@
 import React from 'react'
 import Header from '../components/header/Header'
-import MainMap from '../components/MainMap'
 import Sidebar from '../components/sidebar/Sidebar'
 import MapPage from './MapPage'
 import './home.css'
