@@ -4,6 +4,9 @@ import ReactMapGL, { Marker, Popup, NavigationControl } from "react-map-gl";
 import EditPopUpInfo from "../components/PopUP/EditPopUpInfo";
 import ViewPopUpStart from "../components/PopUP/ViewPopUpStart";
 import ChatInPopUp from "../components/PopUP/NewChat";
+
+
+
 function MapPage() {
   const [editPopupInfo, setEditPopupInfo] = useState(false);
   const [selectedMarker, setSelectedMarker] = useState(null);
@@ -93,7 +96,7 @@ function MapPage() {
         style={{ width: 800, height: 600 }}
         mapStyle="mapbox://styles/mapbox/satellite-streets-v12"
         projection="globe"
-        mapboxAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
+        mapboxAccessToken='pk.eyJ1IjoibXZya2xqYW4iLCJhIjoiY2w1bXYzdjIxMDE3cjNjbXR5ejl2bWFveSJ9.KD9v7tW8kslwNGmg-fOjcQ'
         {...viewState}
         onMove={onMoveFunc}
         onDblClick={(event) => {
