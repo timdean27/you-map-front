@@ -3,10 +3,7 @@ import ReactMapGL, { Marker, Popup, NavigationControl } from "react-map-gl";
 
 import EditPopUpInfo from "../components/PopUP/EditPopUpInfo";
 import ViewPopUpStart from "../components/PopUP/ViewPopUpStart";
-import ChatInPopUp from "../components/PopUP/NewChat";
-
-
-
+import ChatInPopUp from "../components/PopUP/ChatInPopUp";
 function MapPage() {
   const [editPopupInfo, setEditPopupInfo] = useState(false);
   const [selectedMarker, setSelectedMarker] = useState(null);
@@ -32,6 +29,7 @@ function MapPage() {
         "https://media.gettyimages.com/id/1269226133/photo/concept-of-new-york-city-statue-of-liberty-downtown.jpg?s=612x612&w=gi&k=20&c=j490kQvLK__AlFHjeip2eyt9X954Nda82kn1yIs3vkk=",
         "https://media.istockphoto.com/id/1340381886/photo/aerial-view-of-manhattan-at-sunset.jpg?b=1&s=170667a&w=0&k=20&c=uXyWuZuP-4maEheV1sc90cmwBGG4fn3C108_MgJ9Zro=",
       ],
+      chats: ["Chat Marker 0 1", "Chat Marker 0 2","Chat Marker 0 3"]
     },
     {
       markerID: 1,
@@ -43,6 +41,7 @@ function MapPage() {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu_VFA4Al87aQBYSClO7TT3IGZoKXN-FVI8g&usqp=CAU",
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6r9FJ03CZaE9cXY3Fs2IXMdKewUk3glFMTQ&usqp=CAU",
       ],
+      chats: ["Chat Marker 1 1", "Chat Marker 1 2","Chat Marker 1 3"]
     },
   ]);
 
@@ -96,7 +95,8 @@ function MapPage() {
         style={{ width: 800, height: 600 }}
         mapStyle="mapbox://styles/mapbox/satellite-streets-v12"
         projection="globe"
-        mapboxAccessToken='pk.eyJ1IjoibXZya2xqYW4iLCJhIjoiY2w1bXYzdjIxMDE3cjNjbXR5ejl2bWFveSJ9.KD9v7tW8kslwNGmg-fOjcQ'
+        range = {[ -100, 100]}
+        mapboxAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
         {...viewState}
         onMove={onMoveFunc}
         onDblClick={(event) => {
@@ -167,4 +167,3 @@ function MapPage() {
   );
 }
 export default MapPage;
-
